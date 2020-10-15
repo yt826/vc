@@ -29,6 +29,7 @@
    
 
 }
+
 @media (max-width: 500px){
 .div1Wrapper {
     height: 50vh;
@@ -43,3 +44,4 @@
     left: 50px;
 }
 }
+

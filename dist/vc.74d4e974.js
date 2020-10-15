@@ -118,7 +118,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"vc.js":[function(require,module,exports) {
-var string = "\n/*\n* \u6211\u53EB\u8611\u83C7\u5934\uFF0C\u6211\u662F\u4E00\u540D\u524D\u7AEF\u65B0\u4EBA\n* \u63A5\u4E0B\u6765\u6211\u4F1A\u753B\u4E00\u4E2A\u592A\u6781\u56FE\u6765\u5C55\u793A\u6211\u5B66\u5230\u7684\u6280\u80FD\n* \u9996\u5148\uFF0C\u6211\u8981\u5148\u753B\u4E00\u4E2A\u6B63\u65B9\u5F62\n**/\n#div1{\n    border: 1px solid red;\n     width: 200px;\n    height: 200px;\n}\n/* \u63A5\u4E0B\u6765\uFF0C\u6211\u4EEC\u8981\u628A\u5B83\u53D8\u6210\u4E00\u4E2A\u5706\n**/\n#div1\n{\n   border-radius: 50%;\n   box-shadow: 0 0 3px rgba(0,0,0,0.5);\n   border: none;\n}\n/* \u516B\u5366\u662F\u5206\u9634\u9633\u7684\n**/\n#div1{\nbackground: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);\n\n}\n#div1::after{\n    width: 100px;\n    height: 100px;\n    bottom: 0;\n    left: 50%;\n    transform: translateX(-50%);\n    background: #fff;\n    border-radius: 50%;\n    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 25%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 100%, rgba(0,0,0,1) 100%);\n}\n #div1::before{  width: 100px;\n    height: 100px;\n    top: 0;\n    left: 50%;\n    transform: translateX(-50%);\n    background: #000;\n    border-radius: 50%;\n    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 100%);\n";
+var string = "\n/*\n* \u6211\u53EB\u8611\u83C7\u5934\uFF0C\u6211\u662F\u4E00\u540D\u524D\u7AEF\u65B0\u4EBA\n* \u63A5\u4E0B\u6765\u6211\u4F1A\u753B\u4E00\u4E2A\u592A\u6781\u56FE\u6765\u5C55\u793A\u6211\u5B66\u5230\u7684\u6280\u80FD\n* \u9996\u5148\uFF0C\u6211\u8981\u5148\u753B\u4E00\u4E2A\u6B63\u65B9\u5F62\n**/\n#div1{\n     width: 200px;\n    height: 200px;\n}\n/* \u63A5\u4E0B\u6765\uFF0C\u6211\u4EEC\u8981\u628A\u5B83\u53D8\u6210\u4E00\u4E2A\u5706\n**/\n#div1\n{\n   border-radius: 50%;\n   box-shadow: 0 0 3px rgba(0,0,0,0.5);\n   border: none;\n}\n/* \u516B\u5366\u662F\u5206\u9634\u9633\u7684\n**/\n#div1{\nbackground: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);\n\n}\n#div1::after{\n    width: 100px;\n    height: 100px;\n    bottom: 0;\n    left: 50%;\n    transform: translateX(-50%);\n    background: #fff;\n    border-radius: 50%;\n    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 25%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 100%, rgba(0,0,0,1) 100%);\n}\n #div1::before{  width: 100px;\n    height: 100px;\n    top: 0;\n    left: 50%;\n    transform: translateX(-50%);\n    background: #000;\n    border-radius: 50%;\n    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 100%);}\n/* \u592A\u6781\u56FE\u5DF2\u7ECF\u521B\u5EFA\u5B8C\u6BD5\uFF0C\u63A5\u4E0B\u6765\u8BA9\u5B83\u8F6C\u52A8\u8D77\u6765\n**/\n#div1{\n    animation: vc 5s linear infinite;\n}\n@keyframes vc{\n    0%{\n        transform: none;\n    }\n    100%{\n        transform: rotate(360deg);\n    }\n}";
 var last = document.querySelector('#last');
 var style = document.querySelector("style");
 var n = 0;
@@ -147,6 +147,8 @@ var step = function step() {
 };
 
 step();
+var div1 = document.querySelector("#div1");
+div1.className = 'div1';
 },{}],"../../../AppData/Local/Yarn/Data/global/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -175,7 +177,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51516" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60390" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

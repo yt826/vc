@@ -5,7 +5,6 @@ let string = `
 * 首先，我要先画一个正方形
 **/
 #div1{
-    border: 1px solid red;
      width: 200px;
     height: 200px;
 }
@@ -40,8 +39,20 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 50%, rgba(25
     transform: translateX(-50%);
     background: #000;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 100%);
-`
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 100%);}
+/* 太极图已经创建完毕，接下来让它转动起来
+**/
+#div1{
+    animation: vc 5s linear infinite;
+}
+@keyframes vc{
+    0%{
+        transform: none;
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}`
 let last = document.querySelector('#last')
 let style = document.querySelector("style")
 let n = 0
@@ -70,3 +81,5 @@ let step = () => {
     }, 0)
 }
 step()
+let div1 = document.querySelector("#div1")
+div1.className = 'div1'
