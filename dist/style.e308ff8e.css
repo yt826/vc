@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*::after {
+  box-sizing: border-box;
+}
+
+*::before {
+  box-sizing: border-box;
+}
+#div1{
+    position: fixed;
+    top: 20px;
+    left: 50%;
+
+}
+#div1::before{
+    content: "";
+    display: block;
+    position: absolute;
+   
+}
+#div1::after{
+    content: "";
+    display: block;
+    position: absolute;
+   
+
+}
+@media (max-width: 500px){
+.div1Wrapper {
+    height: 50vh;
+} 
+#last {
+    height: 50vh;
+    overflow: auto;
+}
+#div1 {
+    position: relative;
+    top: 50px;
+    left: 50px;
+}
+}
+
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */
